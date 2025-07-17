@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 class="title">Responsive Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+  </div>
+
+  <!-- Gallery -->
+   <marquee>
+  <div class="gallery">
+    <img src="images/image1.jpeg" class="gallery-img nature" alt="Nature 1" onclick="openLightbox(this.src)">
+    <img src="images/image6.jpeg" class="gallery-img city" alt="City 1" onclick="openLightbox(this.src)">
+    <img src="images/image3.jpg" class="gallery-img nature" alt="Nature 2" onclick="openLightbox(this.src)">
+    <img src="images/image7.jpeg" class="gallery-img city" alt="City 2" onclick="openLightbox(this.src)">
+    <img src="images/image5.jpeg" class="gallery-img nature" alt="Nature 3" onclick="openLightbox(this.src)">
+    <img src="images/image2.jpeg" class="gallery-img nature" alt="Nature 1" onclick="openLightbox(this.src)">
+    <img src="images/image10.jpeg" class="gallery-img city" alt="City 1" onclick="openLightbox(this.src)">
+    <img src="images/image8.jpeg" class="gallery-img nature" alt="Nature 2" onclick="openLightbox(this.src)">
+    <img src="images/image9.jpeg" class="gallery-img city" alt="City 2" onclick="openLightbox(this.src)">
+    <img src="images/image4.jpeg" class="gallery-img nature" alt="Nature 3" onclick="openLightbox(this.src)">
+  </div>
+  </marquee>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <span id="close">&times;</span>
+    <img id="lightbox-img" src="">
+    <div id="lightbox-controls">
+      <button onclick="prevImage()">⟨</button>
+      <button onclick="nextImage()">⟩</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
